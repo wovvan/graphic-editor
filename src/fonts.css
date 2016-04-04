@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+@font-face {
+    font-family: MarkProBold;
+    src: url('fonts/MarkPro-Bold.otf');
+}
+
+@font-face {
+    font-family: MarkProRegular;
+    src: url('fonts/MarkPro.otf');
+}
+
+@font-face {
+    font-family: MarkProLight;
+    src: url('fonts/MarkPro-Light.otf');
+}
+
+@font-face {
+    font-family: 'lb-icons';
+    src: url('fonts/icomoon.eot') format('embedded-opentype'),
+        url('fonts/icomoon.woff') format('woff'),
+        url('fonts/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

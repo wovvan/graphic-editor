@@ -1,0 +1,6 @@
+<div class="auto-input">
+    <input type="text" ng-model="vm.text" value="">
+    <div ng-repeat="item in vm.questList track by $index" class="auto-item auto-item-{{$index}}" ng-click="vm.setValue(item.title)">
+            {{item.title}}
+    </div>
+</div>
