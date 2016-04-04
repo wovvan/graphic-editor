@@ -11,7 +11,7 @@ export default /*@ngInject*/ function() {
         controller: /*@ngInject*/ function($rootScope) {
             var ctrl = this;
             ctrl.simpleTable = [];
-            $rootScope.$on('quest.text', addTextInTable.bind(this));
+            $rootScope.$on('autocomplete.text', addTextInTable.bind(this));
             ctrl.deleteItem = function(data){
               remove(ctrl.simpleTable, function(item) {
                 return item.id === data.id;

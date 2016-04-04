@@ -11,6 +11,6 @@ var deps = [
     require('./lb-ui.module')
 ];
 
-angular.module('quest', deps)
+angular.module('autocomplete', deps)
     .run( /*@ngInject*/ function($state, $rootScope) {})
     .config(require('./states'));

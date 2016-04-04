@@ -16,18 +16,18 @@ export default /*@ngInject*/ function() {
             var vm = this;
             $scope.$watch('vm.text', function(text) {
                 if (text && text.length >= 1) {
-                    vm.questList = [];
+                    vm.autocompleteList = [];
                     forEach(vm.list, function(item){
                       if(item.title.indexOf(text) !== -1){
-                        vm.questList.push(item);
+                        vm.autocompleteList.push(item);
                       }
                     });
                 }else{
-                  vm.questList = [];
+                  vm.autocompleteList = [];
                 }
             });
             vm.setValue = function(text){
-              $rootScope.$broadcast("quest.text", text);
+              $rootScope.$broadcast("autocomplete.text", text);
               vm.text = "";
             }
         }
