@@ -64,6 +64,10 @@ module.exports = function makeWebpackConfig(options) {
             {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract('style', 'css!postcss!less')
+            },
+            {
+              test: require.resolve('snapsvg'),
+              loader: 'imports-loader?this=>window,fix=>module.exports=0'
             }
         ]
     };
