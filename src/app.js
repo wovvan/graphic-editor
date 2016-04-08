@@ -8,9 +8,9 @@ import _ from 'lodash'
 
 var deps = [
     uiRouter,
-    require('./lb-ui.module')
+    require('./editor.module')
 ];
 
-angular.module('autocomplete', deps)
+angular.module('graphic-editor', deps)
     .run( /*@ngInject*/ function($state, $rootScope) {})
     .config(require('./states'));

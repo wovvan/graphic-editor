@@ -3,8 +3,7 @@ var autoprefixer = require('autoprefixer-core');
 var webpack = require('webpack');
 module.exports = {
     entry: {
-        //index: './src/lb-ui.module.js',
-        objectives:'./src/objectives/objectives.module.js'
+        index: './src/editor.module.js'
     },
     output: {
         libraryTarget: "umd",
