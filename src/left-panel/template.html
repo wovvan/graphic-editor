@@ -1,1 +1,30 @@
-<div class="test"></div>
+<div class="tab-menu">
+  <md-button class="md-fab md-mini">
+     <md-icon md-font-icon="fa fa-caret-square-o-up menu-icon-size" aria-label="shape">
+     </md-icon>
+
+     <md-fab-speed-dial md-direction="right"
+                          ng-class="demo.selectedMode">
+         <md-fab-trigger>
+           <md-button aria-label="menu" class="md-fab md-warn">
+             <md-icon md-font-icon="fa fa-caret-square-o-up menu-icon-size" aria-label="shape">
+             </md-icon>
+           </md-button>
+         </md-fab-trigger>
+         <md-fab-actions>
+           <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
+             <md-icon md-font-icon="fa fa-square" aria-label="Square">
+             </md-icon>
+           </md-button>
+           <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+             <md-icon md-font-icon="fa fa-circle" aria-label="Circle">
+             </md-icon>
+           </md-button>
+           <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
+             <md-icon md-font-icon="fa fa-play" aria-label="Triangle">
+             </md-icon>
+           </md-button>
+         </md-fab-actions>
+       </md-fab-speed-dial>
+  </md-button>
+</div>

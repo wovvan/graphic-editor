@@ -12,7 +12,6 @@ export default /*@ngInject*/ function() {
         bindToController: true,
         controller: /*@ngInject*/ function($rootScope) {
             var vm = this;
-            console.log("JSON.stringify(canvas);", JSON.stringify(vm.canvas));
         }
     };
 }
