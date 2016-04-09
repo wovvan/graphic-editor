@@ -8,7 +8,7 @@ export default /*@ngInject*/ function() {
         scope:{
           canvas: "="
         },
-        controllerAs: 'vm',
+        controllerAs: 'demo',
         bindToController: true,
         controller: /*@ngInject*/ function($rootScope) {
             var vm = this;
