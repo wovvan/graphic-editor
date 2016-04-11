@@ -18,5 +18,7 @@ var dependencies = [
 
 export default angular.module('editor', dependencies)
     .directive('editor', require('./editor/index.js'))
-    .directive('leftPanel', require('./left-panel/index.js'))
+    .directive('leftTools', require('./left-tools/index.js'))
+    .directive('leftSubTools', require('./left-sub-tools/index.js'))
+    .service('ShapesSvc', require('./shapes/service.js'))
     .name
