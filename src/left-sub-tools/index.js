@@ -6,42 +6,30 @@ export default /*@ngInject*/ function() {
     template: require('./template.html'),
     transclude: false,
     replace: true,
-    scope: {
-      canvas: "="
-    },
+    scope: {},
     controllerAs: 'vm',
     bindToController: true,
-    controller: /*@ngInject*/ function($rootScope) {
+    controller: /*@ngInject*/ function($scope, $rootScope, $timeout) {
       var vm = this;
       var canvas = $rootScope.canvas;
+
       canvas.on({
-        'object:selected': setParams
+        'object:selected': setParams,
+        'object:modified': setParams
       });
 
-      function setParams(options) {
-        clearAll();
-        console.log("vm.left", vm.left);
-        console.log("options.target.left", options.target.left);
-        vm.object = options.target.type;
-        vm.fill = options.target.fill;
-        vm.left = options.target.left;
-        vm.top = options.target.top;
-        vm.opacity = options.target.opacity;
-        vm.radius = options.target.radius;
-        vm.scaleX = options.target.scaleX;
-        vm.scaleY = options.target.scaleY;
-        console.log("vm.left", vm.left);
+      $scope.$watchCollection('vm.target', function(){
+        canvas.renderAll();
+      });
+      
+      vm.removeItem = function(){
+        canvas.remove(vm.target);
       }
 
-      function clearAll() {
-        vm.object = "";
-        vm.fill = "";
-        vm.left = 0;
-        vm.top = "";
-        vm.opacity = "";
-        vm.radius = "";
-        vm.scaleX = "";
-        vm.scaleY = "";
+      function setParams(options) {
+        vm.object = options.target.type;
+        vm.target = options.target;
+        $scope.$apply();
       }
     }
   };

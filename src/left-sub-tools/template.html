@@ -1,13 +1,41 @@
-<div class="sub-menu md-body-1">
+<div class="sub-menu md-body-1" ng-show="vm.object">
   <div class="title md-title">
     {{vm.object}}
   </div>
-  <md-input-container class="md-block" flex-gt-sm>
-    <label>Top</label>
-    <input ng-model="vm.top">
-  </md-input-container>
-  <md-input-container class="md-block" flex-gt-sm>
-    <label>Left</label>
-    <input ng-model="vm.left">
-  </md-input-container>
+  <div layout-gt-sm="row">
+    <md-input-container flex-xs>
+      <label>Top</label>
+      <input type="number" ng-model="vm.target.top">
+    </md-input-container>
+    <md-input-container flex-xs>
+      <label>Left</label>
+      <input type="number" ng-model="vm.target.left">
+    </md-input-container>
+  </div>
+  <div layout-gt-sm="row">
+    <md-input-container flex-xs>
+      <label>Width</label>
+      <input type="number" ng-model="vm.target.width">
+    </md-input-container>
+    <md-input-container flex-xs>
+      <label>Height</label>
+      <input type="number" ng-model="vm.target.height">
+    </md-input-container>
+  </div>
+  <div layout-gt-sm="row">
+    <md-input-container flex-xs>
+      <label>ScaleX</label>
+      <input type="number" ng-model="vm.target.scaleX">
+    </md-input-container>
+    <md-input-container flex-xs>
+      <label>ScaleY</label>
+      <input type="number" ng-model="vm.target.scaleY">
+    </md-input-container>
+  </div>
+
+  <div layout-gt-sm="row">
+    <md-button aria-label="trash" class="md-fab md-mini" ng-click="vm.removeItem()">
+      <md-icon md-font-icon="fa fa-trash menu-icon-size" aria-label="Trash"></md-icon>
+    </md-button>
+  </div>
 </div>
